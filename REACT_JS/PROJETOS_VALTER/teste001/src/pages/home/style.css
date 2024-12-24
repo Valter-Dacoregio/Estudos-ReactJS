@@ -1,0 +1,55 @@
+body{
+    /* background: rgb(216, 216, 216); */
+}
+
+.container{
+    margin-top: 20px;
+}
+
+.filtros{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.filtros label{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.filtros input{
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 0;
+    border: 1px solid #000000;
+}
+
+.filtros button{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 10px;
+    background-color: orange;
+    border: 1px solid black;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#listagem{
+    margin-top: 40px;
+}
+
+#listagem article{
+    border-top: 2px solid black;
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}

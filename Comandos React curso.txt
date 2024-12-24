@@ -1,0 +1,189 @@
+
+//***************************************************************************
+//************************ COMANDOS PARA REACT ******************************
+//***************************************************************************
+
+// CRIANDO UM NOVO PROJETO
+$ npx create-react-app meu-site
+
+// UTILIZADO PARA ROTEAMENTO DE TELAS/COMPONENTES
+$ npm install react-router-dom
+
+// UTILIZADO PARA CRIAÇÃO DE COMPONENTS ESTILIZADOS
+$ npm install --save styled-components
+
+// UTILIZANDO PARA APLICAÇÕES SPA, REDIRECIONA PARA UM ID NA TELA
+$ npm install --save react-router-hash-link
+
+
+//*******************************************
+// FAZENDO BUILD DO PROJETO
+//*******************************************
+
+// CASO A APLICAÇÃO CONTENHA ROTEAMENTO DE TELAS/PÁGINAS,
+// DEVE-SE CRIAR O SEGUINTE ARQUIVO DENTRO DA PASTA PUBLIC DO PROJETO
+// NOME DO ARQUIVO: _redirects
+// CONTEÚDO: /* /index.html 200
+
+// FAZ O BUILD DO PROJETO
+$ npm run build
+
+// PARA FAZER O DEPLOY NA PLATAFORMA NETILIFY
+$ npm install -g netlify-cli
+$ netlify deploy
+// SELECIONAR SE É OU NÃO UM NOVO PROJETO
+// INFORMAR O NOME DO SITE
+// INFORMAR O DIRETÓRIO DO PROJETO: ./build
+
+$ netlify deploy --prod
+
+
+//*******************************************
+// USANDO O FIREBASE
+//*******************************************
+
+// INSTALANDO O FIREBASE NO PROJETO
+$ npm install --save firebase
+
+// SE AO CRIAR O ARQUIVO DE CONFIGURAÇÃO DO FIREBASE OCORRER ALGUM PROBLEMA DE A APLICAÇÃO NÃO FUNCIONAR CORRETAMENTE,
+// SERÁ NECESSÁRIO DELETAR O ARQUIVO 'package-lock.json' E A PASTA 'node_modules'.
+// DEPOIS DEVE-SE EXECUTAR OS SEGUINTES COMANDOS:
+$ npm cache clean --force
+$ npm install
+$ npm start
+
+
+
+
+//*******************************************
+// CASO OCORRER O SEGUINTE ERRO
+//*******************************************
+
+// ERROR: ENOSPC: SYSTEM LIMIT FOR NUMBER OF FILE WATCHERS REACHED
+
+// VERIFICAR O LIMITE ATUAL:
+$ cat /proc/sys/fs/inotify/max_user_watches
+8192
+
+// AJUSTAR O NOVO LIMITE NO ARQUIVO /ETC/SYSCTL.CONF:
+$ echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+
+// VERIFICAR O NOVO LIMITE:
+$ cat /proc/sys/fs/inotify/max_user_watches
+524288
+
+
+
+
+//*******************************************
+// LINK API GIT HUB E API DE REPOSITÓRIOS
+//*******************************************
+// URL...: https://api.github.com/
+// URL...: https://api.github.com/repos/facebook/react
+
+
+
+
+//*******************************************
+// INSTALAÇÃO DE BIBLIOTECA DE ÍCONES
+//*******************************************
+$ npm install react-icons
+
+
+
+
+//********************************************************
+// INSTALAÇÃO DE BIBLIOTECA QUE AJUDA A FAZER REQUISIÇÕES
+//********************************************************
+$ npm install axios
+
+
+
+//********************************************************
+// BUSCAR NO GOOGLE POR MAIS ÍCONES
+//********************************************************
+font awesome list
+
+
+
+
+
+
+
+
+//********************************************************
+// INSTALANDO O YARN
+//********************************************************
+$ npm install --global yarn
+
+
+//********************************************************
+// INSTALANDO REACT-ROUTER-DOM COM YARN
+//********************************************************
+$ yarn add react-router-dom
+
+
+
+
+
+//********************************************************
+// INSTALANDO API FAKE
+//********************************************************
+$ npm install -g json-server
+
+//********************************************************
+// RODANDO A API FAKE
+//********************************************************
+$ json-server --watch server.json --port 3333
+
+
+
+
+
+
+//********************************************************
+// INSTALAÇÃO BIBLIOTECA DE ÍCONES
+//********************************************************
+$ npm install react-icons --save
+
+
+
+
+
+
+//********************************************************
+// INSTALAÇÃO DO REDUX
+//********************************************************
+$ npm install redux react-redux
+
+
+
+
+
+
+//********************************************************
+// BIBLIOTECA PARA LIDAR COM A IMUTABILIDADE DE STATE NO REDUX
+//********************************************************
+$ npm install immer
+
+
+
+
+
+
+
+
+//********************************************************
+// INSTALAÇÃO DO REDUX SAGA
+//********************************************************
+// PERMITE REALIZAR AÇÕES ASSÍNCRONAS AO UTILIZAR OS REDUCERS
+// CHAMAR UMA API, POR EXEMPLO
+$ npm install redux-saga
+
+
+
+//********************************************************
+// BIBLIOTECA PARA LIDAR COM ROTEAMENTO NO REDUX
+//********************************************************
+$ npm install history OU yarn add history
+$ npm install history@4.10.1 // ESTA VERSÃO NÃO APRESENTOU PROBLEMA
